@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: demo-cunsumer
+
+dubbo:
+  registry:
+    address: nacos://10.20.254.188:8848

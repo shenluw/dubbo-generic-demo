@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo-provider
+nacos:
+  config:
+    server-addr: localhost:8848
+    bootstrap:
+      enable: true
+    data-id: ${spring.application.name}
+    type: yaml
+
+
+dubbo:
+  registry:
+    address: nacos://localhost:8848
+  scan:
+    base-packages: demo
+  protocol:
+    port: -1
